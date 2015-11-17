@@ -27,8 +27,6 @@ class JsonReadPluginApp < AppAbstract
     def savejsonfile(message)
         log("info", "savejsonfile is invoked in json_read_plugin App")
         log("debug", message)
-        # the result_array needs to be stored into CMDB
-        # updateCustomContext()
         @id = "messageid"
         log("info", "Updating cmdb with exceldata: id:"+@id) 
 
@@ -39,7 +37,6 @@ class JsonReadPluginApp < AppAbstract
             "id" => @id,
             "data" => message
         }
-        #pass the filled in hash object to the following method
         updateDataContextToCMDB(data_pack)  
     end 
 
