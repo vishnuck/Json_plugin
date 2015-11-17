@@ -8,7 +8,7 @@ class JsonReadPluginApp < AppAbstract
     def initializeApp()
         json_input = getJSONArgs()
 
-	@json_read = json_input['json_file_read']
+	   @json_read = json_input['json_read']
         @log_level = json_input['log_level'] 
 
         appContext = getAppContext(json_input)
